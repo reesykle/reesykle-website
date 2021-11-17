@@ -781,9 +781,8 @@
           </div>
         </div>
         <div class="row justify-content-center mt-5">
-            <button id="addSykleToWallet" class="tn btn-primary-3 btn-sm py-3">
-              <img class="mb-1" style="width:42px" src="https://s3.amazonaws.com/reesykle.com/assets/brand/v1/icons/reesykle_icon_64x64.svg"/>
-              <br/>
+            <button id="addSykleToWallet" style="width: 250px" class="py-2 btn btn-primary-3 btn-sm" data-toggle="tooltip" data-placement="bottom" title="Add the Sykle Token to your MetaMask wallet">
+              <img class="" style="width:42px" src="https://s3.amazonaws.com/reesykle.com/assets/brand/v1/icons/reesykle_icon_64x64.svg"/>
               <span>Add to MetaMask</span>
             </button>
         </div>
@@ -976,16 +975,47 @@
     <script type="text/javascript" src="assets/js/typed.min.js"></script>
     <!-- Required theme scripts (Do not remove) -->
     <script type="text/javascript" src="assets/js/theme.js"></script>
+    <!--Web3-->
+    <script type="text/javascript" src="assets/js/web3.min.js"></script>
     <!-- Removes page load animation when window is finished loading -->
     <script type="text/javascript">
-      $('#addSykleToWallet').click(function() {
-        alert("WOOOW!");
-      });
       window.addEventListener("load", function() {
         document.querySelector('body').classList.add('loaded');
 
         // Autoplay background video on mobile devices
         console.log($('video')[0]);
+
+        // On click, add the Sykle token to the user's meta mask wallet
+        $("#addSykleToWallet").click(function() {
+          const tokenAddress = '0x5c25b256dbe756538265e5fc05b99ed49a59c986';
+          const tokenSymbol = 'SYKLE';
+          const tokenDecimals = 18;
+          const tokenImage = 'https://s3.amazonaws.com/reesykle.com/assets/brand/v1/icons/reesykle_icon_64x64.svg';
+
+          try {
+            // wasAdded is a boolean. Like any RPC method, an error may be thrown.
+            const wasAdded = window.ethereum.request({
+              method: 'wallet_watchAsset',
+              params: {
+                type: 'ERC20', // Initially only supports ERC20, but eventually more!
+                options: {
+                  address: tokenAddress, // The address that the token is at.
+                  symbol: tokenSymbol, // A ticker symbol or shorthand, up to 5 chars.
+                  decimals: tokenDecimals, // The number of decimals in the token
+                  image: tokenImage, // A string url of the token logo
+                },
+              },
+            });
+
+            if (wasAdded) {
+              console.log('Thanks for your interest!');
+            } else {
+              console.log('Your loss!');
+            }
+          } catch (error) {
+            console.log(error);
+          }
+        });
       });
 
     </script>
