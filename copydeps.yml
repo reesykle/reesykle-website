@@ -134,3 +134,7 @@
   files: "jquery.smartWizard.min.js"
   from: "node_modules/smartwizard/dist/js"
   to: "pages/assets/js"
+-
+  files: "web3.min.js"
+  from: "node_modules/web3/dist"
+  to: "pages/assets/js"
