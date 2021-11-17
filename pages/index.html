@@ -49,25 +49,25 @@
             <div class="py-2 py-lg-0">
               <ul class="navbar-nav">
                 <li class="nav-item dropdown">
-                  <a href="#about" data-smooth-scroll class="nav-link dropdown-toggle" data-toggle="dropdown-grid" aria-expanded="false" aria-haspopup="true">About</a>
+                  <a href="#about" data-smooth-scroll class="nav-link dropdown-toggle">About</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a href="#features" data-smooth-scroll class="nav-link dropdown-toggle" data-toggle="dropdown-grid" aria-expanded="false" aria-haspopup="true">Feature</a>
+                  <a href="#features" data-smooth-scroll class="nav-link dropdown-toggle">Feature</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a href="#ecosystem" data-smooth-scroll class="nav-link dropdown-toggle" data-toggle="dropdown-grid" aria-expanded="false" aria-haspopup="true">Ecosystem</a>
+                  <a href="#ecosystem" data-smooth-scroll class="nav-link dropdown-toggle">Ecosystem</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a href="#rewards" data-smooth-scroll class="nav-link dropdown-toggle" data-toggle="dropdown-grid" aria-expanded="false" aria-haspopup="true">Rewards</a>
+                  <a href="#rewards" data-smooth-scroll class="nav-link dropdown-toggle">Rewards</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a href="#roadmap" data-smooth-scroll class="nav-link dropdown-toggle" data-toggle="dropdown-grid" aria-expanded="false" aria-haspopup="true">Roadmap</a>
+                  <a href="#roadmap" data-smooth-scroll class="nav-link dropdown-toggle">Roadmap</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a href="#how-to-buy" data-smooth-scroll class="nav-link dropdown-toggle" data-toggle="dropdown-grid" aria-expanded="false" aria-haspopup="true">Buy</a>
+                  <a href="#how-to-buy" data-smooth-scroll class="nav-link dropdown-toggle">Buy</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a href="#faq" data-smooth-scroll class="nav-link dropdown-toggle" data-toggle="dropdown-grid" aria-expanded="false" aria-haspopup="true">FAQ</a>
+                  <a href="#faq" data-smooth-scroll class="nav-link dropdown-toggle">FAQ</a>
                 </li>
               </ul>
             </div>
@@ -86,7 +86,7 @@
             <p class="lead mb-4">
               The future of <span data-typed-text data-loop="false" data-type-speed="60" data-strings='["eco-payments","eco-communities","eco-real-estate", "eco-ventures", "an eco-friendly world."]'></span>
             </p>
-            <a href="#" class="btn btn-primary-3 btn-lg">Follow Us</a>
+            <a href="#footer" data-smooth-scroll class="btn btn-primary-3 btn-lg">Follow Us</a>
           </div>
         </div>
       </div>
@@ -780,6 +780,13 @@
             </div>
           </div>
         </div>
+        <div class="row justify-content-center mt-5">
+            <button id="addSykleToWallet" class="tn btn-primary-3 btn-sm py-3">
+              <img class="mb-1" style="width:42px" src="https://s3.amazonaws.com/reesykle.com/assets/brand/v1/icons/reesykle_icon_64x64.svg"/>
+              <br/>
+              <span>Add to MetaMask</span>
+            </button>
+        </div>
       </div>
     </section>
     <!--Frequently Asked Questions-->
@@ -860,7 +867,7 @@
       </div>
     </section>
     <!--Footer-->
-    <footer class="pb-5 bg-primary-3 text-light">
+    <footer id="footer" class="pb-5 bg-primary-3 text-light">
       <div class="container">
         <div class="row mb-4 justify-content-center">
           <div class="col-auto">
@@ -971,6 +978,9 @@
     <script type="text/javascript" src="assets/js/theme.js"></script>
     <!-- Removes page load animation when window is finished loading -->
     <script type="text/javascript">
+      $('#addSykleToWallet').click(function() {
+        alert("WOOOW!");
+      });
       window.addEventListener("load", function() {
         document.querySelector('body').classList.add('loaded');
 
