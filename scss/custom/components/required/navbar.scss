@@ -14,7 +14,8 @@
     transition: all $transition-time ease;
     &.scrolled{
       &.navbar-dark{
-        background: theme-color('primary-3');
+        background: rgba(255,255,255,0.2);
+        @include frosted-glass(180px, 10px);
         border-bottom-color: rgba(0,0,0,0);
       }
       &.navbar-light{
