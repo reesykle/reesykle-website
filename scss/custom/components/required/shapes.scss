@@ -1,0 +1,13 @@
+//
+//
+// shapes.scss
+//
+//
+
+/********** Ellipse **********/
+@mixin shape-ellipse($size) {
+  border-radius: 100%;
+  width: $size;
+  height: $size;
+}
+/*****************************/
