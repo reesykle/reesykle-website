@@ -3,3 +3,189 @@
 // user.scss
 //
 // Place your own custom CSS or SCSS rules below this line, these rules will override any Bootstrap and theme variables.
+
+
+/************** HEADER GRADIENT ANIMATION **************/
+#rsk-header-gradient-animation {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  filter: blur(100px);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+@mixin headerEllipseAnimation {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.1, 0, 0.9, 1);
+  animation-timing-function: cubic-bezier(0.1, 0, 0.9, 1);
+}
+
+.rsk-header-ellipse-1 {
+  @include shape-ellipse(700px);
+  background: #FEEA00;
+  border-radius: 100%;
+  position: absolute;
+  z-index: -2;
+  left: 90%;
+  opacity: 0.3;
+  top: 50%;
+  @include headerEllipseAnimation();
+  -webkit-animation-duration: 11s;
+  animation-duration: 17s;
+  -webkit-animation-name: rsk-header-ellipse1-animation;
+  animation-name: rsk-header-ellipse1-animation;
+}
+
+.rsk-header-ellipse-2 {
+  @include shape-ellipse(600px);
+  background: #10C135;
+  border-radius: 100%;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.4;
+  left: 0%;
+  top: 30%;
+  @include headerEllipseAnimation();
+  -webkit-animation-duration: 11s;
+  animation-duration: 11s;
+  -webkit-animation-name: rsk-header-ellipse2-animation;
+  animation-name: rsk-header-ellipse2-animation;
+  animation-direction: reverse;
+}
+
+.rsk-header-ellipse-3 {
+  @include shape-ellipse(500px);
+  background: #F34213;
+  border-radius: 100%;
+  position: absolute;
+  z-index: -3;
+  opacity: 0.3;
+  left: 50%;
+  top: 90%;
+  @include headerEllipseAnimation();
+  -webkit-animation-duration: 11s;
+  animation-duration: 11s;
+  -webkit-animation-name: rsk-header-ellipse3-animation;
+  animation-name: rsk-header-ellipse3-animation;
+}
+
+@-webkit-keyframes rsk-header-ellipse1-animation {
+  0% {
+    transform: translateY(-50%) translateX(-50%) rotate(-20deg) translateX(20%);
+  }
+  25% {
+    transform: translateY(-50%) translateX(-50%) skew(-15deg, -15deg) rotate(80deg) translateX(30%);
+  }
+  50% {
+    transform: translateY(-50%) translateX(-50%) rotate(180deg) translateX(25%);
+  }
+  75% {
+    transform: translateY(-50%) translateX(-50%) skew(15deg, 15deg) rotate(240deg) translateX(15%);
+  }
+  to {
+    transform: translateY(-50%) translateX(-50%) rotate(340deg) translateX(20%);
+  }
+}
+@keyframes rsk-header-ellipse1-animation {
+  0% {
+    transform: translateY(-50%) translateX(-50%) rotate(-20deg) translateX(20%);
+  }
+  25% {
+    transform: translateY(-50%) translateX(-50%) skew(-15deg, -15deg) rotate(80deg) translateX(30%);
+  }
+  50% {
+    transform: translateY(-50%) translateX(-50%) rotate(180deg) translateX(25%);
+  }
+  75% {
+    transform: translateY(-50%) translateX(-50%) skew(15deg, 15deg) rotate(240deg) translateX(15%);
+  }
+  to {
+    transform: translateY(-50%) translateX(-50%) rotate(340deg) translateX(20%);
+  }
+}
+
+@-webkit-keyframes rsk-header-ellipse2-animation {
+  0% {
+    transform: translateY(-50%) translateX(-50%) rotate(40deg) translateX(-20%);
+  }
+  25% {
+    transform: translateY(-50%) translateX(-50%) skew(15deg, 15deg) rotate(110deg) translateX(-5%);
+  }
+  50% {
+    transform: translateY(-50%) translateX(-50%) rotate(210deg) translateX(-35%);
+  }
+  75% {
+    transform: translateY(-50%) translateX(-50%) skew(-15deg, -15deg) rotate(300deg) translateX(-10%);
+  }
+  to {
+    transform: translateY(-50%) translateX(-50%) rotate(400deg) translateX(-20%);
+  }
+}
+@keyframes rsk-header-ellipse2-animation {
+  0% {
+    transform: translateY(-50%) translateX(-50%) rotate(40deg) translateX(-20%);
+  }
+  25% {
+    transform: translateY(-50%) translateX(-50%) skew(15deg, 15deg) rotate(110deg) translateX(-5%);
+  }
+  50% {
+    transform: translateY(-50%) translateX(-50%) rotate(210deg) translateX(-35%);
+  }
+  75% {
+    transform: translateY(-50%) translateX(-50%) skew(-15deg, -15deg) rotate(300deg) translateX(-10%);
+  }
+  to {
+    transform: translateY(-50%) translateX(-50%) rotate(400deg) translateX(-20%);
+  }
+}
+
+@-webkit-keyframes rsk-header-ellipse3-animation {
+  0% {
+    transform: translateY(-50%) translateX(-50%) translateX(-15%) translateY(10%);
+  }
+  20% {
+    transform: translateY(-50%) translateX(-50%) translateX(20%) translateY(-30%);
+  }
+  40% {
+    transform: translateY(-50%) translateX(-50%) translateX(-25%) translateY(-15%);
+  }
+  60% {
+    transform: translateY(-50%) translateX(-50%) translateX(30%) translateY(20%);
+  }
+  80% {
+    transform: translateY(-50%) translateX(-50%) translateX(5%) translateY(35%);
+  }
+  to {
+    transform: translateY(-50%) translateX(-50%) translateX(-15%) translateY(10%);
+  }
+}
+@keyframes rsk-header-ellipse3-animation {
+  0% {
+    transform: translateY(-50%) translateX(-50%) translateX(-15%) translateY(10%);
+  }
+  20% {
+    transform: translateY(-50%) translateX(-50%) translateX(20%) translateY(-30%);
+  }
+  40% {
+    transform: translateY(-50%) translateX(-50%) translateX(-25%) translateY(-15%);
+  }
+  60% {
+    transform: translateY(-50%) translateX(-50%) translateX(30%) translateY(20%);
+  }
+  80% {
+    transform: translateY(-50%) translateX(-50%) translateX(5%) translateY(35%);
+  }
+  to {
+    transform: translateY(-50%) translateX(-50%) translateX(-15%) translateY(10%);
+  }
+}
+/*******************************************************/

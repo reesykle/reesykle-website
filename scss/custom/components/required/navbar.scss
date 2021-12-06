@@ -14,7 +14,8 @@
     transition: all $transition-time ease;
     &.scrolled{
       &.navbar-dark{
-        background: theme-color('primary-3');
+        background: rgba(255,255,255,0.2);
+        @include frosted-glass(180px, 10px);
         border-bottom-color: rgba(0,0,0,0);
       }
       &.navbar-light{
@@ -55,7 +56,7 @@
   .navbar-toggler{
     svg{
       path{
-        fill: $white;
+        fill: $black;
       }
     }
   }
@@ -112,7 +113,8 @@
 nav[data-overlay].navbar-toggled-show{
   background: $white;
   &.navbar-dark{
-    background: theme-color('primary-3');
+    background-color: rgba(255,255,255,0.2);
+    @include frosted-glass(180px, 10px);
     .dropdown-item{
       color: rgba($white,.5);
       &:hover{
