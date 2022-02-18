@@ -1,9 +1,11 @@
 import * as React from 'react';
 
-const Index = () => {
+const HomePage = () => {
     return (
-        <div><h1>Welcome to Reesykle</h1></div>
+        <div>
+            <h1>Homepage</h1>
+        </div>
     );
 }
 
-export default Index;
+export default HomePage;
